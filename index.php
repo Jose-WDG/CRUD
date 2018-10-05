@@ -1,5 +1,6 @@
     <?php require 'header.php'; ?>
-    <?php $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    <?php 
+    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
       if(!empty($dados['evniar_Cadastro'])):
         unset($dados['evniar_Cadastro']);
@@ -7,7 +8,7 @@
         try {
           $consul_cadastrar = "INSERT INTO clientes (nome,Email,Data_de_nacimento,Login,Senha,data_criada) VALUES (:nome,:Email,:Data_de_nacimento,:Login,:Senha,NOW()) ";
 
-          $cadastrar = $conectar->getconecatar()->prepare($consul_cadastrar);
+          $cadastrar = $conectar->getconectar()->prepare($consul_cadastrar);
 
           $cadastrar->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
           $cadastrar->bindParam(':Email',$dados['Email'], PDO::PARAM_STR);
@@ -28,7 +29,7 @@
 
       endif;
     ?>
-    <h1>Cadastrar usuario</h1>
+    <h1 style="text-align:center;">Cadastrar usuario</h1>
     <form name="novo_cliente" action="" method="post">
       <label>Nome: </label>
       <input type="text" name="nome" placeholder="Nome"><br><br>
@@ -49,6 +50,4 @@
 
     </form>
 
-  </body>
-
-</html>
+<?php require 'footer.php';?>

@@ -1,6 +1,6 @@
 <?php require 'Conexao.php';
     $conectar = new Conexao();
-    $conectar->getconecatar();
+    $conectar->getconectar();
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@
     nav{
       height: 30px;
       width: 100%;
-      background-color: blue;
+      background-color: black;
     }
     ul li{
       display: inline-block;
@@ -34,13 +34,19 @@
     ul li a{
       color: #fff;
     }
+    .container{
+      width:1200px;
+      margin:0 auto;
+    }
     </style>
   </head>
 
   <body>
     <nav>
-      <ul>
+      <ul class="container">
         <li><a href="index.php">Cadastrar</a>
         <li><a href="lista_clientes.php">Lista de usuario</a>
+      
       </ul>
     </nav>
+    <div class="container">

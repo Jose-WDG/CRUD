@@ -25,7 +25,7 @@ class Conexao
 
   }
 
-  public function getconecatar()
+  public function getconectar()
   {
     return self::conectar();
   }
