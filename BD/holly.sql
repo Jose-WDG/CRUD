@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `cidade` (
 
 -- Copiando estrutura para tabela holly.clientes
 CREATE TABLE IF NOT EXISTS `clientes` (
-  `id_cliente` int(11) NOT NULL AUTO_INCREMENT,
-  `id_cidade` int(11) DEFAULT NULL,
+  `id_cliente` int(255) NOT NULL AUTO_INCREMENT,
+  `id_cidade` int(255) DEFAULT NULL,
   `nome` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `data_criada` datetime DEFAULT NULL,

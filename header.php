@@ -15,12 +15,31 @@
     table{
       width: 100%;
     }
-    
+    table tr{
+      height: 30px;
+    }
     table tr td
     {
       text-align: center;
     }
+    table tr:nth-child(2n){
+      background-color: #00bcd4a6;
+    }
+    table tr td a{
+      background-color: #000;
+      text-decoration: none;
+      border: solid #000 3px;
+      border-radius: 5px;
 
+      color: #ffff;
+    }
+    table tr td a:hover{
+
+      background-color: #fff;
+      border: solid #fff 3px;
+      color: #000;
+
+    }
     nav{
       height: 30px;
       width: 100%;
@@ -46,7 +65,7 @@
       <ul class="container">
         <li><a href="index.php">Cadastrar</a>
         <li><a href="lista_clientes.php">Lista de usuario</a>
-      
+
       </ul>
     </nav>
     <div class="container">
